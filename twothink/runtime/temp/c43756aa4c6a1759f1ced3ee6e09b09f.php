@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:85:"D:\phpStudy\WWW\twothink\public/../application/admin/view/default/property\index.html";i:1506680646;s:82:"D:\phpStudy\WWW\twothink\public/../application/admin/view/default/public\base.html";i:1496373782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:85:"D:\phpStudy\WWW\twothink\public/../application/admin/view/default/property\index.html";i:1506741286;s:82:"D:\phpStudy\WWW\twothink\public/../application/admin/view/default/public\base.html";i:1496373782;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -150,6 +150,7 @@
         </tbody>
     </table>
 </div>
+<div class=page><?php echo $page; ?></div>
 
         </div>
         <div class="cont-ft">

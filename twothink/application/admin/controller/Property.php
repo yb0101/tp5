@@ -5,14 +5,11 @@ use think\Request;
 class 	Property extends Admin{
 //物业展示列表
 public function index(){
-    $pid = input('get.pid', 0);
-    /* 获取频道列表 */
-    $map  = array('status' => array('gt', -1), 'pid'=>$pid);
-    //var_dump($map);exit;
-    $list = \think\Db::name('Property')->select();
+    $list = \think\Db::name('Property')->paginate(10);
+    $page = $list->render();
     //var_dump($list);exit;
+    $this->assign('page', $page);
     $this->assign('list', $list);
-    $this->assign('pid', $pid);
     $this->assign('meta_title' , '保修管理');
     return $this->fetch('index');
 }
