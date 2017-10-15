@@ -1,0 +1,21 @@
+{empty name="list"}
+<button class="btn btn-primary btn_load">哥，真没啦</button>
+{else/}
+<div class="container-fluid">
+    {volist name="list" id="document"}
+    <div class="row noticeList">
+        <a href="{:url('Shop/show?id='.$document['id'])}">
+            <div class="col-xs-2">
+                <img class="noticeImg" src="/image/1.png" />
+            </div>
+            <div class="col-xs-10">
+                <p class="title">{$document.title}</p>
+                <p class="intro">{$document.description}</p>
+                <p class="info">浏览: {$document.view} <span class="pull-right">{$document.create_time|date='Y-m-d',###}</span> </p>
+            </div>
+        </a>
+    </div>
+    {/volist}
+</div>
+<button class="btn btn-primary btn_load" data-toggle="collapse" onclick="LoadPage({$no})">点击获取更多</button>
+{/empty}
